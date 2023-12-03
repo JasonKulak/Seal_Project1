@@ -1,73 +1,39 @@
-# Project
-### By Somebody
+# Project1
+### By Jason Kulak
 
 DEPLOYED SITE: [Click Here](https://seal-project1-sigma.vercel.app/)
 
 ## Description on Project
 
-A paragraph discussing the idea of your project, the API you are using and desired user experience.
+A paragraph discussing the idea of your project, the API you are using, and desired user experience.
 
-> I am creating a perfume maker, we generate list of perfume ingredient using the items from the perfume ingredient api. Users will select ingredients and generate an imaginary perfume.
+>  I am creating a 2 player Star Wars trivia game. I will be using contentful to create the questions and the API.  Users will answer questions related to the Star Wars universe
 
 ## Details about the API
 
 Give me a brief description of the API you are using and how you plan on using it. Does it use some sort of authentication like an APIkey. List some of the urls are using below.
 
-- `https://www.perfumeapi.com/ingredients`: This returns a json array with all the different ingedients
+> The API I'll be using in from contentful.com and is a read-only API for delivering content from contentful to apps, websites, and other media.
 
-Sample Fetch/Ajax called:
-```js
-const url = "https://www.perfumeapi.com/ingredients"
-fetch(url)
-.then((res) => res.json())
-.then((data) => console.log(data))
-```
+Fetch called:
+<script>
+const url = "https://cdn.contentful.com/spaces/ka9x7i3b4e49/environments/master/entries?access_token=XDsz_JL64ML_sSt02_hJtwPrMhoQBy_wA21HTVxdhaA&content_type=triviaQ"
 
-The Data I get back:
-```json
-[
-  {
-    "ingredient": "Bergamot",
-    "description": "A citrus fruit with a bright, uplifting scent."
-  },
-  {
-    "ingredient": "Lavender",
-    "description": "A flowering plant with a calming, relaxing scent."
-  },
-  {
-    "ingredient": "Rose",
-    "description": "A flowering plant with a romantic, feminine scent."
-  },
-  {
-    "ingredient": "Jasmine",
-    "description": "A flowering plant with an exotic, sensual scent."
-  },
-  {
-    "ingredient": "Sandalwood",
-    "description": "A woody plant with a warm, earthy scent."
-  },
-  {
-    "ingredient": "Patchouli",
-    "description": "A herb with a deep, musky scent."
-  },
-  {
-    "ingredient": "Vanilla",
-    "description": "A spice with a sweet, gourmand scent."
-  },
-  {
-    "ingredient": "Amber",
-    "description": "A fossilized resin with a warm, balsamic scent."
-  },
-  {
-    "ingredient": "Musk",
-    "description": "An animal secretion with a sensual, musky scent."
-  },
-  {
-    "ingredient": "Oud",
-    "description": "A type of agarwood with a dark, mysterious scent."
-  }
-]
-```
+    fetch(url)
+    .then(res => res.json())
+    .then(data => {
+        const items = data.items
+
+        for( let item of items){
+            const body = document.body
+
+            body.innerHTML = `
+            <h1>${item.fields.question}</h1>
+            `
+        }
+    })
+</script>
+
 
 ## Mockup
 
@@ -75,11 +41,11 @@ Here put a mix of text explanation plus a picture giving us an idea of the layou
 
 #### Desktop View
 
-![My Desktop View](https://i.imgur.com/5Bs7N6B.png)
+![My Desktop View](https://i.imgur.com/k080Puo.jpg)
 
 #### Mobile View
 
-![My Mobile View](https://i.imgur.com/5Bs7N6B.png)
+![My Mobile View](https://i.imgur.com/k080Puo.jpg)
 
 ## Schedule of Work
 

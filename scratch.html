@@ -13,5 +13,23 @@
 </head>
 <body>
     
+    <script>
+        const url = "https://cdn.contentful.com/spaces/ka9x7i3b4e49/environments/master/entries?access_token=XDsz_JL64ML_sSt02_hJtwPrMhoQBy_wA21HTVxdhaA&content_type=triviaQ"
+
+        fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            const items = data.items
+
+            for( let item of items){
+                const body = document.body
+
+                body.innerHTML = `
+                <h1>${item.fields.question}</h1>
+                `
+            }
+        })
+    </script>
+    
 </body>
 </html>
