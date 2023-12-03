@@ -1,7 +1,7 @@
 # Project1
 ### By Jason Kulak
 
-DEPLOYED SITE: [Click Here](https://seal-project1-sigma.vercel.app/)
+DEPLOYED SITE: [Click Here](https://jasonkulak.github.io/Seal_Project1/)
 
 ## Description on Project
 
