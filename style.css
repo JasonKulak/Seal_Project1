@@ -8,22 +8,31 @@ body {
 }
 
 .good {
-
+    background-color: green;
+    color: white;
+    font-size: 20px;
 }
 
 .title {
-
+    font-size: 35px;
 }
 
 .evil {
-
+    background-color: red;
+    color: white;
+    font-size: 20px;
 }
 
-.quesiton {
-
+.text-middle {
+    display: flex;
+    justify-content: space-around;
 }
 
 .answer-field {
+
+}
+
+.answer {
 
 }
 
@@ -31,6 +40,14 @@ body {
 
 }
 
+.question {
+
+}
+
 .answer-box {
-    
+
+}
+
+.box {
+
 }
