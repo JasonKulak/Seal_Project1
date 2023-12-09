@@ -46,6 +46,7 @@ const chooseAnswer = (event, question) => {
     }
 }
 
+   
 const setBoard = (q) => {
     //getting a random question
     const randomIndex = Math.floor(Math.random() * q.length)
